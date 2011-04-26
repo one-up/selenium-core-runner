@@ -1,0 +1,39 @@
+= selenium-core-runner
+
+Selenium Core runner for Ruby on Rails 3.
+
+You can run the test suite generated from Selenium IDE on browser using Selenium Core!
+
+
+== INSTALL
+
+* Append to your Gemfile
+
+ gem 'selenium-core-runner'
+
+* Then bundle install
+
+ $ bundle install
+
+
+== SYNOPSIS
+
+Put test suites and cases generated from Selenium IDE into test/selenium.
+
+Assumed structure in test/selenium.
+
+ test
+   selenium/
+     test_suite_name.html (test suite)
+     test_suite_name/
+       test_case1.html
+       test_case2.html
+       .
+       .
+       .
+
+Access to http://example.com/selenium-core-runner
+
+== LICENSE
+
+This project rocks and uses MIT-LICENSE.
