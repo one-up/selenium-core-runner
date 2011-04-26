@@ -16,6 +16,7 @@ module SeleniumCoreRunner
 
     def runner 
       @suite = params[:suite]||"default"
+      render :layout=>(SeleniumCoreRunner.layout || false)
     end
 
     def prompt

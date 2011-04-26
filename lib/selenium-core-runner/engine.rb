@@ -2,7 +2,7 @@
 require "selenium-core-runner"
 require "rails"
 
-module SeleniumWebRunner
+module SeleniumCoreRunner
   class Engine < Rails::Engine
     initializer "static assets" do |app|
       app.middleware.use ::ActionDispatch::Static, "#{root}/public"
