@@ -26,8 +26,8 @@ module SeleniumCoreRunner
 
     def show
       path = params[:suite]
-      path += "."+params[:format] unless params[:format].blank?
       path += "/"+params[:case] unless params[:case].blank?
+      path += "."+params[:format] unless params[:format].blank?
       open(Rails.root.to_s+"/test/selenium/#{path}") {|f|
         render :text=>f.read , :layout=>false
       }
