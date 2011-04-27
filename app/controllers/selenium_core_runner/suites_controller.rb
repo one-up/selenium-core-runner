@@ -1,8 +1,13 @@
 module SeleniumCoreRunner
   class SuitesController < ApplicationController
+    layout :layout
     private
     def suites_dir
       Rails.root.to_s+"/test/selenium"
+    end
+    def layout
+      return 'application' if SeleniumCoreRunner.layout==:default
+      SeleniumCoreRunner.layout || false
     end
     public
     def list
@@ -16,7 +21,6 @@ module SeleniumCoreRunner
 
     def runner 
       @suite = params[:suite]||"default"
-      render :layout=>(SeleniumCoreRunner.layout || false)
     end
 
     def prompt
